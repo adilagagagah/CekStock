@@ -2,7 +2,8 @@ import pandas as pd
 from datetime import datetime
 import locale
 
-file_path = "C:/Users/gagah/Downloads/Cek Stock Fajar Fadhillah/DATA BASE DOS & STOCK 12 SEPT 2024.xlsx"
+file_name = "DATA BASE DOS & STOCK 12 SEPT 2024.xlsx"
+file_path = f"C:/Users/gagah/Downloads/Cek Stock Fajar Fadhillah/{file_name}"
 df = pd.read_excel(file_path, sheet_name="dos by store-brand type & area")
 site_codes = ['E423', 'E491', 'E288', 'E371']
 result_rows = []
@@ -10,9 +11,8 @@ result_rows = []
 # Membuat writer Excel
 locale.setlocale(locale.LC_TIME, 'Indonesian')
 tanggal_sekarang = datetime.now()
-bulan_singkat = tanggal_sekarang.strftime("%b").upper()
-bulan_singkat = "SEPT" if bulan_singkat == "SEP" else bulan_singkat
-output_file = f"{tanggal_sekarang.strftime('%d')} {bulan_singkat}.xlsx"
+output_file_name = file_name[22:-10]
+output_file = f"{output_file_name}.xlsx"
 tanggal_format = tanggal_sekarang.strftime('%A, %d %B %Y')
 
 def merge_cells(worksheet, result_df, start_row, merge_format):
