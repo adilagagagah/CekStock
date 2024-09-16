@@ -3,7 +3,7 @@ from datetime import datetime
 import locale
 
 file_name = "DATA BASE DOS & STOCK 12 SEPT 2024.xlsx"
-file_path = f"C:/Users/gagah/Downloads/Cek Stock Fajar Fadhillah/{file_name}"
+file_path = f"../Cek Stock Fajar Fadhillah/{file_name}"
 df = pd.read_excel(file_path, sheet_name="dos by store-brand type & area")
 site_codes = ['E423', 'E491', 'E288', 'E371']
 result_rows = []
@@ -12,7 +12,7 @@ result_rows = []
 locale.setlocale(locale.LC_TIME, 'Indonesian')
 tanggal_sekarang = datetime.now()
 output_file_name = file_name[22:-10]
-output_file = f"{output_file_name}.xlsx"
+output_file = f"../Cek Stock Fajar Fadhillah/{output_file_name}.xlsx"
 tanggal_format = tanggal_sekarang.strftime('%A, %d %B %Y')
 
 def merge_cells(worksheet, result_df, start_row, merge_format):
