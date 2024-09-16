@@ -147,4 +147,4 @@ with pd.ExcelWriter(output_file, engine='xlsxwriter') as writer:
 
         result_rows = []
 
-print(f"Hasil telah disimpan dengan nama {output_file}")
+print(f"Hasil telah disimpan pada path : {output_file}")
