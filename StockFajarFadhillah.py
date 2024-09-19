@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 import locale
 
-file_name = "DATA BASE DOS & STOCK 12 SEPT 2024.xlsx"
+file_name = "DATA BASE DOS & STOCK 19 SEPT 2024.xlsx"
 file_path = f"../Cek Stock Fajar Fadhillah/{file_name}"
 df = pd.read_excel(file_path, sheet_name="dos by store-brand type & area")
 site_codes = ['E423', 'E491', 'E288', 'E371']
